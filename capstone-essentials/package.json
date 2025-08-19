@@ -1,0 +1,17 @@
+{
+  "name": "ts",
+  "version": "1.0.0",
+  "description": "Code sample consist of implementation of Observer, Observable and usage of this classes (handling requests). The assignment implies the coverage of the types of the entire code not only Observable & Observer but also request, users objects and observer handlers.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "author": "Liliya",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.2.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
