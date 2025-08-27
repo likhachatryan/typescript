@@ -23,7 +23,7 @@ type UserType = {
 
 type ObserverHandlersType<T> = {
   next?: (value: T) => void;
-  error?: (error: any) => void;
+  error?: (error: Error) => void;
   complete?: () => void;
 };
 
@@ -62,7 +62,7 @@ class Observer<T> {
     }
   }
 
-  error(error: any): void {
+  error(error: Error): void {
     if (!this.isUnsubscribed) {
       if (this.handlers.error) {
         this.handlers.error(error);
@@ -153,7 +153,7 @@ const handleRequest = (request: RequestType): ResponseType => {
   // handling of request
   return { status: HttpStatus.OK };
 };
-const handleError = (error: any): ResponseType => {
+const handleError = (error: Error): ResponseType => {
   // handling of error
   return { status: HttpStatus.INTERNAL_SERVER_ERROR };
 };
